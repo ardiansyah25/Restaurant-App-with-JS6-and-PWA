@@ -1,0 +1,78 @@
+@media screen and (max-width:1024px) {
+    .detail{
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:649px) {
+    .detail{
+        margin: 0 20px;
+    }
+    .nav{
+       margin-top: 289px;
+       position: absolute;
+       width: 300px;
+       background-color: #ad332b;
+       padding-right: 0px;
+
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        transition: transform 0.3s ease;
+
+    }
+    .nav_list_item{
+        display: list-item;
+        border-bottom: 1px solid #E0E0E0;
+        width: 100%;
+        text-align: left;
+    }
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .hero{
+        min-height: 400px;
+        background-image: url("/images/heros/hero-small.jpg");
+    }
+
+    .hero_title{
+        font-size: 2rem;
+    }
+
+    .hero_desc{
+        font-size: 14px;
+    }
+
+    .posts{
+       grid-template-columns: 1fr;
+    }
+    .post_item_description{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .header_menu {
+        display: none;
+    }
+
+    .posts{
+        grid-template-columns: 1fr 1fr;
+     }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        width: 1200px;
+    }
+    .posts{
+        grid-template-columns: repeat(3, 1fr);
+     }
+}
+
+@media screen and (max-width:375px) {
+    .header_menu {
+        margin-left: 80px;
+    }
+}
