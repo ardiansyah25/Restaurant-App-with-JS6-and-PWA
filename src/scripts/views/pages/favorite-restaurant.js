@@ -16,9 +16,13 @@ const FavoriteRestaurant = {
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getRestaurantAll();
     const restaurantContainer = document.querySelector('.posts');
+    if(restaurants.length > 0){
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
+  }else{
+    restaurantContainer.innerHTML = '<p id="favoriteEmpty">Belum ada Favorite nih</p>'
+  }
   },
 };
 
